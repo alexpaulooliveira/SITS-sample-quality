@@ -273,7 +273,8 @@ For reproducible execution, users should:
 4. obtain the datasets under their respective access conditions; and
 5. execute the REST-based workflow implemented in `api/v.0.0.1/app.py`.
 
-The source code version associated with the submitted study will be archived as a versioned software release. The corresponding persistent identifier (DOI) will be added here after archival.
+The source code version associated with the submitted study is archived as version 1.0.0 on Zenodo and is available at https://doi.org/10.5281/zenodo.23040025.
+
 
 ## Results
 
@@ -309,15 +310,23 @@ The datasets, source code, and machine-readable computational outputs required t
 - **Source code:** available in this GitHub repository.
 - **Computational outputs:** available in the `results/` directory of this repository.
 
-A persistent DOI for the version of the software associated with the submitted study will be provided after archival.
+The version of the software associated with the submitted study is archived on Zenodo at https://doi.org/10.5281/zenodo.23040025.
 
 ## Citation
 
 Machine-readable citation metadata for the software are provided in the
 `CITATION.cff` file included in this repository.
 
-A persistent software DOI and the recommended citation will be added after
-creation of the versioned release and archival.
+The archived software release associated with the submitted study is available at:
+
+https://doi.org/10.5281/zenodo.23040025
+
+Recommended citation:
+
+Oliveira, A. P. A. de, Santos da Silva, M. A., & Navoni, J. A. (2026).
+SITS-sample-quality (Version 1.0.0) [Computer software]. Zenodo.
+https://doi.org/10.5281/zenodo.23040025
+
 
 ## Related work
 
