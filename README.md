@@ -329,7 +329,17 @@ https://doi.org/10.1016/j.isprsjprs.2021.04.014
 
 ## License
 
-Licensing information will be provided before the versioned software release.
+All rights are reserved while the institutional licensing conditions for this
+software are being determined. No open-source license is currently granted.
+
+The source code is made publicly available for scientific transparency,
+reproducibility, and verification of the associated research. Public
+availability of the source code should not be interpreted as granting
+permission to use, modify, redistribute, or sublicense the software beyond
+what is permitted by applicable law.
+
+Licensing information will be updated after the applicable institutional
+requirements have been clarified.
 
 ## Authors
 
