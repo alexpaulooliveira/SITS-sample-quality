@@ -2,182 +2,146 @@
 
 **Fully automated training-data refinement for satellite image time series using automatically tuned self-organizing maps, cluster-constrained neighbourhoods, and a novel Bayes-inspired heuristic**
 
-This repository contains the source code, dataset access information, and computational outputs associated with a fully automated framework for training-data refinement in Satellite Image Time Series (SITS).
-
-The framework was developed to identify and remove labelled samples that are inconsistent with their local spectro-temporal context. It combines automatically tuned Self-Organizing Maps (SOM), clustering of SOM weight vectors, cluster-constrained neighbourhood analysis, and a Bayes-inspired count-based heuristic for sample-label consistency assessment.
-
-The software accompanies the research article:
-
-> Alex Oliveira, Marcos Silva, and Julio Navoni.  
-> **Fully automated training-data refinement for satellite image time series using automatically tuned self-organizing maps, cluster-constrained neighbourhoods, and a novel Bayes-inspired heuristic.**  
-> *GIScience & Remote Sensing*.  
-> Manuscript under preparation/submission.
-
----
-
 ## Overview
 
-Reliable labelled training data are essential for supervised classification of satellite image time series. However, reference datasets may contain inconsistencies caused by mislabelling, geolocation errors, spectral similarity among classes, temporal inconsistencies, atmospheric effects, and other sources of noise.
+This repository contains the source code, datasets, and computational outputs associated with a fully automated framework for refining labelled training data in satellite image time series (SITS).
 
-This project provides a reproducible and fully automated workflow for refining labelled SITS training datasets.
+The framework is designed to identify and remove samples that are inconsistent with their local spectro-temporal context. It builds on Self-Organizing Maps (SOMs) and introduces three main methodological components:
 
-The proposed framework introduces three main methodological components:
+1. **Automated SOM hyperparameter tuning**, in which candidate SOM configurations are systematically evaluated using complementary quantization-error and neural-grid-occupancy criteria.
 
-1. **Automated SOM hyperparameter tuning**  
-   SOM configurations are systematically evaluated using complementary quantization-error and neural-grid-occupancy criteria. In the experiments reported in the associated study, 550 candidate configurations were evaluated for each dataset.
+2. **Cluster-constrained neighbourhoods**, in which neighbourhood evidence is restricted to neurons belonging to the same cluster as the focal neuron, providing spectro-temporally coherent local support.
 
-2. **Cluster-constrained neighbourhoods**  
-   SOM weight vectors are clustered, and neighbourhood evidence used to assess a sample is restricted to neurons belonging to the same cluster as the focal neuron. This provides a spectro-temporally coherent neighbourhood for sample-consistency assessment.
+3. **A novel Bayes-inspired count-based heuristic**, which combines empirical neighbourhood support and focal-neuron evidence using variance-weighted aggregation without requiring formal posterior estimation.
 
-3. **Bayes-inspired count-based heuristic**  
-   Sample-label consistency is assessed by combining empirical neighbourhood support and focal-neuron evidence through a variance-weighted aggregation mechanism. The resulting score is an empirical support measure and should not be interpreted as a formal Bayesian posterior probability.
-
-The complete procedure is executed iteratively to generate a refined training dataset while maintaining explicit control over sample removal.
-
----
+The complete workflow is designed to support reproducible and fully automated training-data refinement. In the four real-world datasets evaluated in the associated study, no expert intervention was required to resolve final cases.
 
 ## Repository structure
 
 ```text
 SITS-sample-quality/
 ├── api/
-│   └── v.0.0.1/       # REST-based implementation of the processing workflow
-├── datasets/          # Dataset access information and/or distributable data
-├── results/           # Machine-readable computational outputs
-└── README.md
+│   └── v.0.0.1/
+│       ├── app.py
+│       └── img/
+│           └── alg.png
+├── datasets/
+├── results/
+├── README.md
+└── requirements.txt
 ```
 
-The `api/v.0.0.1` directory contains the implementation of the computational workflow.
+The main implementation is provided in:
 
-The `datasets` directory is intended to document the datasets used in the experiments and their corresponding access conditions. Some datasets used in the associated study originate from third-party sources and may therefore be subject to redistribution restrictions.
+```text
+api/v.0.0.1/app.py
+```
 
-The `results` directory contains computational outputs associated with the experiments reported in the accompanying article.
+The `datasets/` directory contains or indexes the datasets used by the workflow, subject to their respective access conditions.
 
----
+The `results/` directory contains machine-readable computational outputs associated with the experiments.
 
 ## Computational workflow
 
-The software implements the methodology as a REST-based processing workflow. The main stages include:
+The main computational workflow comprises the following stages:
 
-- input-data preparation and cleaning;
-- initial classification assessment;
-- feature centring;
-- systematic SOM hyperparameter evaluation;
-- neural-grid occupancy assessment;
-- SOM training;
-- clustering of SOM weight vectors;
-- selection of the clustering solution;
-- iterative sample-consistency assessment;
-- generation of exclusion maps;
-- training-data refinement;
-- classification reassessment; and
-- generation of statistical summaries and publication-oriented outputs.
+1. preparation and standardization of labelled satellite image time-series samples;
+2. optional Local Outlier Factor (LOF) analysis;
+3. systematic evaluation of SOM hyperparameter configurations;
+4. selection of the SOM configuration using complementary quantization-error and neural-grid-occupancy criteria;
+5. SOM training;
+6. clustering of SOM weight vectors;
+7. definition of cluster-constrained neighbourhoods;
+8. assessment of sample-label consistency using neighbourhood and focal-neuron evidence;
+9. application of the Bayes-inspired count-based heuristic;
+10. generation of the exclusion map and refined dataset;
+11. quantitative evaluation of the resulting training data.
 
-The REST architecture makes the experimental sequence explicit and allows processing steps to be reproduced through parameterized HTTP requests.
+The implementation exposes the workflow through a REST-based interface.
 
----
+## Automated SOM hyperparameter tuning
 
-## SOM hyperparameter selection
+For each dataset, the SOM hyperparameter search evaluates combinations of:
 
-The experimental parameter space used in the associated study consists of:
+- 11 candidate neural-grid dimensions;
+- 5 candidate neighbourhood-width (`sigma`) values;
+- 10 candidate learning-rate values.
 
-- **11 SOM grid dimensions**;
-- **5 initial neighbourhood widths (`sigma`)**; and
-- **10 learning rates**.
+This results in **550 candidate SOM configurations per dataset**.
 
-The Cartesian product produces **550 candidate SOM configurations per dataset**.
+Candidate configurations are evaluated using two complementary criteria:
 
-Quantization error and neural-grid occupancy are used as complementary criteria for automatically selecting an appropriate SOM configuration.
+- quantization error; and
+- neural-grid occupancy.
 
----
+This procedure systematically selects the SOM configuration instead of relying on a manually chosen network configuration.
 
-## Cluster-constrained neighbourhood analysis
+## Cluster-constrained neighbourhoods
 
-After SOM configuration, clustering algorithms are evaluated on the SOM weight vectors.
+After SOM training, neuron weight vectors are grouped using clustering methods.
 
-The implemented workflow supports:
+The implementation supports clustering approaches including:
 
 - DBSCAN;
 - HDBSCAN;
 - k-Means; and
 - hierarchical agglomerative clustering.
 
-Candidate clustering solutions are assessed using:
+Clustering quality can be evaluated using measures including Accuracy (ACC), Normalized Mutual Information (NMI), and Adjusted Rand Index (ARI).
 
-- clustering accuracy (ACC);
-- Normalized Mutual Information (NMI); and
-- Adjusted Rand Index (ARI).
+For sample-consistency assessment, local neighbourhood evidence is restricted to neurons belonging to the **same cluster as the focal neuron**. This prevents spatially adjacent SOM neurons representing different spectro-temporal regimes from contributing indiscriminately to the same local assessment.
 
-During sample-consistency assessment, only neighbouring neurons belonging to the **same cluster as the focal neuron** contribute neighbourhood evidence. This restriction is intended to prevent topologically adjacent but spectro-temporally different regions of the SOM from being treated as equivalent local evidence.
+## Bayes-inspired count-based heuristic
 
----
+The framework includes a Bayes-inspired heuristic for assessing sample-label consistency.
 
-## Bayes-inspired sample-consistency heuristic
+The heuristic does **not** estimate a formal Bayesian posterior probability. Instead, it combines empirical evidence derived from:
 
-The framework uses a count-based heuristic inspired by the evidence-updating rationale of Bayesian reasoning.
+- the focal neuron; and
+- its cluster-constrained neighbourhood.
 
-For each sample, the procedure considers:
+The aggregation procedure uses local variability to weight the available evidence, so that more internally consistent neighbourhood evidence receives greater influence than highly heterogeneous evidence.
 
-- empirical support for the sample label among eligible neighbouring neurons;
-- evidence observed at the focal Best Matching Unit (BMU); and
-- variability of the neighbourhood evidence.
+The framework supports sample statuses including kept, removed, and flagged cases. In the four datasets evaluated in the associated study, the final refined datasets contained only kept and removed samples; no expert intervention was required to resolve final cases.
 
-These components are combined into an updated support score through variance-weighted aggregation.
+## Datasets
 
-This procedure **does not estimate prior, likelihood, or posterior probability distributions** and should therefore not be interpreted as a formal implementation or approximation of Bayes' theorem.
+The associated study evaluates the framework using four real-world Brazilian satellite image time-series datasets acquired from MODIS and Sentinel-2.
 
-Samples can be classified by the implementation as:
+| Dataset | Sensor | Region / biome | Access |
+| --- | --- | --- | --- |
+| Cerrado I | MODIS | Cerrado | Public |
+| Cerrado II | Sentinel-2 MSI | Cerrado | Subject to third-party data-access conditions |
+| Pampa | Sentinel-2 MSI | Pampa | Subject to third-party data-access conditions |
+| Santana | Sentinel-2 MSI | Santana do São Francisco, Sergipe, Brazil | Public |
 
-- `kept`;
-- `removed`; or
-- `flagged`.
+### Cerrado I
 
-In the four datasets evaluated in the associated study, no expert intervention was required to resolve final cases.
+The Cerrado I dataset is publicly available through Zenodo:
 
----
-
-## Experimental datasets
-
-The associated study evaluates the framework using four real-world Brazilian SITS datasets acquired from MODIS and Sentinel-2 and covering different sensors, geographic regions, land-cover settings, and classification problems.
-
-| Dataset | Sensor | Region / Biome | Access |
-|---|---|---|---|
-| Cerrado I | MODIS | Cerrado, Brazil | Publicly available |
-| Cerrado II | Sentinel-2 MSI | Cerrado, Brazil | Subject to source-provider conditions |
-| Pampa | Sentinel-2 MSI | Pampa, Brazil | Subject to source-provider conditions |
-| Santana | Sentinel-2 MSI | Santana do São Francisco, Sergipe, Brazil | Publicly available |
-
-### Public datasets
-
-**Cerrado I**
-
-Santos et al. (2021), *Quality control and class noise reduction of satellite image time series*.
-
-Zenodo DOI:  
 https://doi.org/10.5281/zenodo.3941278
 
-**Santana**
+### Cerrado II
 
-Santos da Silva, Marcos Aurélio (2024).
+The Cerrado II dataset is subject to third-party data-access conditions. Access should follow the conditions established by the original data providers.
 
-Zenodo DOI:  
+### Pampa
+
+The Pampa dataset is subject to third-party data-access conditions. Access should follow the conditions established by the original data providers.
+
+### Santana
+
+The Santana dataset is publicly available through Zenodo:
+
 https://doi.org/10.5281/zenodo.22674760
 
-### Restricted or third-party datasets
-
-Cerrado II and Pampa contain data obtained from third-party sources and are not redistributed through this repository when redistribution rights do not permit it.
-
-Access information and provenance for these datasets are documented in the accompanying article and in the `datasets` directory.
-
-Users must comply with the terms and conditions established by the original data providers.
-
----
+The `datasets/` directory provides the repository-level organization associated with the datasets used in the study.
 
 ## Software environment
 
-The software was developed and validated using Python 3.12.7.
+The software was developed and validated using **Python 3.12.7**.
 
-The main direct dependencies are:
+The direct Python dependencies used by the implementation are:
 
 - Flask 3.1.0
 - pandas 2.2.3
@@ -196,95 +160,88 @@ The main direct dependencies are:
 - Pillow 11.1.0
 - pdfrw 0.4
 
-All direct Python dependencies and their validated versions are specified in
-`requirements.txt`.
+All direct Python dependencies and their validated versions are specified in `requirements.txt`.
 
-A reproducible environment can be created with:
+## Installation
+
+A clean Python environment is recommended.
+
+Using Python's built-in virtual-environment support:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
+```
+
+The dependency set specified in `requirements.txt` was validated in a clean Python 3.12 environment using:
+
+```bash
+python -m pip check
+```
+
+with no broken requirements reported.
 
 ## Reproducibility
 
-The repository is organized to preserve the computational materials required to reproduce and verify the analyses reported in the associated article.
+The repository is intended to provide the source code, dataset references, dependency specification, and machine-readable computational outputs required to reproduce and verify the computational workflow described in the associated study.
 
-The processing workflow preserves intermediate and final products associated with each experiment, including, where applicable:
+For reproducible execution, users should:
 
-- transformed datasets;
-- trained SOM models;
-- neural weights;
-- clustering products;
-- sample-removal decisions;
-- classification results; and
-- statistical summaries.
+1. use Python 3.12;
+2. create a clean virtual environment;
+3. install the dependencies specified in `requirements.txt`;
+4. use the datasets under their respective access conditions; and
+5. execute the REST-based workflow implemented in `api/v.0.0.1/app.py`.
 
-The version of the source code associated with the article will be archived through **Zenodo** as a versioned GitHub release and assigned a persistent DOI.
+The source code version associated with the submitted study will be archived as a versioned software release. The corresponding persistent identifier (DOI) will be added here after archival.
 
----
+## Results
 
-## Archived software release and DOI
+Machine-readable outputs generated by the computational experiments are organized in the `results/` directory.
 
-A permanent Zenodo DOI for the software release associated with the article will be added here after the first archival release is created.
-
-**Software DOI:** *to be added after the Zenodo archival release*
-
-The archived release will provide an immutable snapshot of the software version used to produce the results reported in the article.
-
----
-
-## Citation
-
-If you use this software, please cite the associated article and the archived software release.
-
-The complete citation and software DOI will be added after publication/archival.
-
-A machine-readable `CITATION.cff` file will also be provided in this repository.
-
----
+These outputs complement the quantitative results reported in the associated manuscript and are provided to facilitate verification and reproducibility.
 
 ## Data availability
 
-Dataset provenance, access conditions, source code, and machine-readable computational outputs are documented in this repository and in the Data Availability Statement of the associated article.
+The datasets, source code, and machine-readable computational outputs required to reproduce and verify the results reported in the associated study are available subject to the following conditions:
 
-Repository:
+- **Cerrado I:** publicly available through Zenodo at https://doi.org/10.5281/zenodo.3941278.
+- **Cerrado II:** subject to third-party data-access conditions.
+- **Pampa:** subject to third-party data-access conditions.
+- **Santana:** publicly available through Zenodo at https://doi.org/10.5281/zenodo.22674760.
+- **Source code:** available in this GitHub repository.
+- **Computational outputs:** available in the `results/` directory of this repository.
 
-https://github.com/alexpaulooliveira/SITS-sample-quality
+A persistent DOI for the version of the software associated with the submitted study will be provided after archival.
 
-The availability of individual datasets depends on the licensing and redistribution conditions established by their original providers. Public datasets are referenced through their persistent identifiers rather than unnecessarily duplicated.
+## Citation
 
----
+A `CITATION.cff` file will be provided with the archived software release to supply machine-readable citation metadata.
 
-## Authors
+The software DOI and recommended citation will be added after creation of the versioned release and archival.
 
-**Alex Oliveira**  
-ORCID: https://orcid.org/0000-0002-8346-7954
+## Related work
 
-**Marcos Silva**  
-ORCID: https://orcid.org/0000-0002-5367-2869
+The framework builds on previous work on quality control and class-noise reduction in satellite image time series:
 
-**Julio Navoni**  
-ORCID: https://orcid.org/0000-0001-8715-0527
+Santos et al. (2021). *Quality control and class noise reduction of satellite image time series*. ISPRS Journal of Photogrammetry and Remote Sensing, 177, 75–88.
 
----
+https://doi.org/10.1016/j.isprsjprs.2021.04.014
 
 ## License
 
-Licensing information for the source code will be specified before the first archived software release.
+Licensing information will be provided before the versioned software release.
 
-Dataset licenses and access conditions are independent of the software license and remain governed by the respective data providers.
+## Authors
 
----
+Authorship and contributor information for the software will be formally specified in the `CITATION.cff` file accompanying the versioned release.
 
-## Acknowledgements
+## Associated publication
 
-This repository contains the computational implementation and reproducibility materials associated with the research described above.
+This repository accompanies the manuscript:
 
-The proposed framework builds on previous research on quality control and class-noise reduction of satellite image time series, particularly:
+**Fully automated training-data refinement for satellite image time series using automatically tuned self-organizing maps, cluster-constrained neighbourhoods, and a novel Bayes-inspired heuristic**
 
-Santos, L., Ferreira, K., Camara, G., Picoli, M., & Simoes, R. (2021).  
-*Quality control and class noise reduction of satellite image time series.*  
-ISPRS Journal of Photogrammetry and Remote Sensing, 177, 75–88.  
-https://doi.org/10.1016/j.isprsjprs.2021.04.014
+Publication metadata, including the article DOI, will be added after publication.
