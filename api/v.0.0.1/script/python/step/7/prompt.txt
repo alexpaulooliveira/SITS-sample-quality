@@ -1,0 +1,5 @@
+
+
+execute o projeto principal "python app.py", antes de executar "prompt.sh"
+
+Consulte os arquivos gerados em "</.../diretorio_api>/api/v.0.0.1/projs</nome_projeto>/12_method/step_03/exclusion_map_<iteration_number>/"

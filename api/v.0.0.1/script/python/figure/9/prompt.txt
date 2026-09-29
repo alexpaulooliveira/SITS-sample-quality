@@ -1,0 +1,5 @@
+
+
+execute o projeto principal "python app.py", antes de executar "prompt.sh"
+
+Consulte os arquivos gerados em "</.../diretorio_github>/SITS-sample-quality/api/v.0.0.1/projs/<nome_projeto>/08_mapping_original_labels/"

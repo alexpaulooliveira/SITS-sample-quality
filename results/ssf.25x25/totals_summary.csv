@@ -1,0 +1,4 @@
+iteration_number,total,kept (qt),kept (%),removed (qt),removed (%),flagged (qt),flagged (%)
+1,10000,9370,93.7,630,6.3,0,0.0
+2,9370,8979,95.83,391,4.17,0,0.0
+3,8979,8763,97.59,216,2.41,0,0.0

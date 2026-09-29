@@ -1,0 +1,13 @@
+label,Dense_Woodland,Dunes,Fallow_Cotton,Millet_Cotton,Pasture,Rocky_Savanna,Savanna,Savanna_Parkland,Silviculture,Soy_Corn,Soy_Cotton,Soy_Fallow
+Dense_Woodland,8985,0,0,0,1,12,70,0,0,0,0,0
+Dunes,0,531,0,0,0,0,0,0,0,0,0,0
+Fallow_Cotton,0,0,432,0,3,0,0,0,0,0,3,1
+Millet_Cotton,0,0,1,162,0,0,0,0,0,0,0,0
+Pasture,58,0,0,0,5760,0,2,0,1,0,0,2
+Rocky_Savanna,275,0,0,0,0,6881,6,8,0,0,0,0
+Savanna,42,0,0,0,16,0,8217,3,0,0,0,0
+Savanna_Parkland,0,0,0,0,0,2,11,2502,0,0,0,0
+Silviculture,40,0,0,0,1,0,2,0,267,0,0,0
+Soy_Corn,0,0,0,0,8,0,2,0,0,4416,4,13
+Soy_Cotton,0,0,0,1,0,0,0,0,0,10,3578,0
+Soy_Fallow,0,0,1,0,7,0,2,0,0,92,0,1479

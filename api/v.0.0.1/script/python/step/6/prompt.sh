@@ -1,0 +1,12 @@
+curl -X POST http://127.0.0.1:5000/step_02__clusterize \
+  -F "project_name=pampa.15x15" \
+  -F "iteration_number=2" \
+  -F "algorithm=agghie" \
+  -F "dimension=15x15" \
+  -F "actual_number_of_clusters=9" \
+  -F "data_columns=B02,B03,B04,B08,EVI,NDVI" \
+  -F "with_indexes=false" \
+  -F "indexes_font=10" \
+  -F cluster_number=-1 \
+  -F cluster_color="#00f" \
+  -F cluster_width=4  

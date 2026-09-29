@@ -1,0 +1,10 @@
+label,Afloramento,Agricultura,Campo,Corpos-hídricos,Reservatório,Silvicultura,Urbano,Vegetação-arbórea,Áreas-arenosas
+Afloramento,88,0,0,0,0,0,1,0,0
+Agricultura,0,1126,57,1,0,0,0,0,2
+Campo,2,22,2825,0,0,0,0,0,0
+Corpos-hídricos,0,1,0,205,1,0,0,0,0
+Reservatório,0,0,0,2,455,0,0,0,0
+Silvicultura,0,0,0,0,0,117,0,4,0
+Urbano,0,1,0,0,0,0,30,0,0
+Vegetação-arbórea,0,0,0,0,0,0,0,873,0
+Áreas-arenosas,0,4,1,0,0,0,0,0,68

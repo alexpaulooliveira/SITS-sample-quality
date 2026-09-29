@@ -1,0 +1,13 @@
+curl -X POST http://127.0.0.1:5000/mapping_original_labels \
+  -F "project_name=lorena.60x60" \
+  -F "iteration_number=12" \
+  -F "use_predicted_bmus=true" \
+  -F "with_indexes=false" \
+  -F "label_name=label" \
+  -F "dimensions=60x60" \
+  -F "sigma=1.5" \
+  -F "learning_rate=0.45" \
+  -F "neighborhood_function=gaussian" \
+  -F "topology=hexagonal" \
+  -F "data_columns=ndvi,evi,nir,mir" \
+  -F "files=png"    

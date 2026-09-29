@@ -1,0 +1,12 @@
+curl -X POST http://127.0.0.1:5000/mapping_original_labels \
+  -F "project_name=ssf.25x25" \
+  -F "iteration_number=3" \
+  -F "use_predicted_bmus=true" \
+  -F "with_indexes=false" \
+  -F "label_name=label" \
+  -F "dimensions=25x25" \
+  -F "sigma=1" \
+  -F "learning_rate=0.5" \
+  -F "neighborhood_function=gaussian" \
+  -F "topology=hexagonal" \
+  -F "data_columns=B02,B03,B04,B05,B06,B07,B08,B11,B12,B8A,EVI,NDVI"

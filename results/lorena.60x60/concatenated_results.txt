@@ -1,0 +1,1710 @@
+
+
+##################################################################
+########  Results on Raw Data - start ########
+##################################################################
+
+Results on Original Data — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9514  |  0.9543   | 0.9514 |  0.9514  |
+|     2     |  0.9539  |  0.9568   | 0.9539 |  0.954   |
+|     3     |  0.9547  |  0.9571   | 0.9547 |  0.9547  |
+|     4     |  0.9533  |  0.9559   | 0.9533 |  0.9534  |
+|     5     |  0.9512  |  0.9544   | 0.9512 |  0.9512  |
+|     6     |  0.947   |  0.9503   | 0.947  |  0.947   |
+|     7     |  0.9545  |  0.9567   | 0.9545 |  0.9546  |
+|     8     |  0.9524  |  0.9554   | 0.9524 |  0.9523  |
+|     9     |  0.9613  |  0.9631   | 0.9613 |  0.9613  |
+|    10     |  0.9508  |  0.9534   | 0.9508 |  0.9505  |
++-----------+----------+-----------+--------+----------+
+
+Results on Original Data — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9531 |
+| Accuracy Std Dev  | 0.0035 |
+|  Precision Mean   | 0.9558 |
+| Precision Std Dev | 0.0031 |
+|    Recall Mean    | 0.9531 |
+|  Recall Std Dev   | 0.0035 |
+|   F1-Score Mean   | 0.9531 |
+| F1-Score Std Dev  | 0.0035 |
++-------------------+--------+
+
+Results on Original Data — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9692 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9987 |
+|  Millet_Cotton   | 0.9992 |
+|     Pasture      | 0.9854 |
+|  Rocky_Savanna   | 0.9859 |
+|     Savanna      | 0.9906 |
+| Savanna_Parkland | 0.999  |
+|   Silviculture   | 0.9982 |
+|     Soy_Corn     | 0.9902 |
+|    Soy_Cotton    | 0.9976 |
+|    Soy_Fallow    | 0.9919 |
++------------------+--------+
+
+Results on Original Data — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.8799 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9699 |
+|  Millet_Cotton   | 0.9834 |
+|     Pasture      | 0.9731 |
+|  Rocky_Savanna   | 0.995  |
+|     Savanna      | 0.9717 |
+| Savanna_Parkland | 0.9933 |
+|   Silviculture   | 0.9943 |
+|     Soy_Corn     | 0.9263 |
+|    Soy_Cotton    | 0.985  |
+|    Soy_Fallow    | 0.9732 |
++------------------+--------+
+
+Results on Original Data — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9785 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9254 |
+|  Millet_Cotton   | 0.8954 |
+|     Pasture      | 0.9237 |
+|  Rocky_Savanna   | 0.9164 |
+|     Savanna      | 0.9773 |
+| Savanna_Parkland | 0.9889 |
+|   Silviculture   | 0.7943 |
+|     Soy_Corn     | 0.9795 |
+|    Soy_Cotton    | 0.9864 |
+|    Soy_Fallow    | 0.8289 |
++------------------+--------+
+
+Results on Original Data — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9266 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.947  |
+|  Millet_Cotton   | 0.9367 |
+|     Pasture      | 0.9477 |
+|  Rocky_Savanna   | 0.954  |
+|     Savanna      | 0.9745 |
+| Savanna_Parkland | 0.9911 |
+|   Silviculture   | 0.8818 |
+|     Soy_Corn     | 0.9521 |
+|    Soy_Cotton    | 0.9857 |
+|    Soy_Fallow    | 0.895  |
++------------------+--------+
+
+
+
+##################################################################
+########  Results on Raw Data - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results After Standard Scaler - start ########
+##################################################################
+
+After Standard Scaler — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9516  |  0.9545   | 0.9516 |  0.9516  |
+|     2     |  0.9539  |  0.9568   | 0.9539 |  0.954   |
+|     3     |  0.9547  |  0.9572   | 0.9547 |  0.9547  |
+|     4     |  0.9535  |  0.9562   | 0.9535 |  0.9536  |
+|     5     |  0.9512  |  0.9544   | 0.9512 |  0.9512  |
+|     6     |  0.947   |  0.9503   | 0.947  |  0.947   |
+|     7     |  0.9545  |  0.9567   | 0.9545 |  0.9546  |
+|     8     |  0.9524  |  0.9554   | 0.9524 |  0.9523  |
+|     9     |  0.9613  |  0.9631   | 0.9613 |  0.9613  |
+|    10     |  0.9506  |  0.9532   | 0.9506 |  0.9503  |
++-----------+----------+-----------+--------+----------+
+
+After Standard Scaler — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9531 |
+| Accuracy Std Dev  | 0.0035 |
+|  Precision Mean   | 0.9558 |
+| Precision Std Dev | 0.0031 |
+|    Recall Mean    | 0.9531 |
+|  Recall Std Dev   | 0.0035 |
+|   F1-Score Mean   | 0.9531 |
+| F1-Score Std Dev  | 0.0035 |
++-------------------+--------+
+
+After Standard Scaler — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9692 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9987 |
+|  Millet_Cotton   | 0.9992 |
+|     Pasture      | 0.9854 |
+|  Rocky_Savanna   | 0.9859 |
+|     Savanna      | 0.9907 |
+| Savanna_Parkland | 0.999  |
+|   Silviculture   | 0.9982 |
+|     Soy_Corn     | 0.9902 |
+|    Soy_Cotton    | 0.9976 |
+|    Soy_Fallow    | 0.9919 |
++------------------+--------+
+
+After Standard Scaler — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.8799 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9716 |
+|  Millet_Cotton   | 0.9834 |
+|     Pasture      | 0.9733 |
+|  Rocky_Savanna   | 0.995  |
+|     Savanna      | 0.9718 |
+| Savanna_Parkland | 0.9933 |
+|   Silviculture   | 0.9943 |
+|     Soy_Corn     | 0.9259 |
+|    Soy_Cotton    | 0.985  |
+|    Soy_Fallow    | 0.9732 |
++------------------+--------+
+
+After Standard Scaler — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9786 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9254 |
+|  Millet_Cotton   | 0.8954 |
+|     Pasture      | 0.9237 |
+|  Rocky_Savanna   | 0.9164 |
+|     Savanna      | 0.9774 |
+| Savanna_Parkland | 0.9889 |
+|   Silviculture   | 0.7943 |
+|     Soy_Corn     | 0.9795 |
+|    Soy_Cotton    | 0.9862 |
+|    Soy_Fallow    | 0.8289 |
++------------------+--------+
+
+After Standard Scaler — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9266 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9477 |
+|  Millet_Cotton   | 0.9367 |
+|     Pasture      | 0.9478 |
+|  Rocky_Savanna   | 0.954  |
+|     Savanna      | 0.9746 |
+| Savanna_Parkland | 0.9911 |
+|   Silviculture   | 0.8818 |
+|     Soy_Corn     | 0.9519 |
+|    Soy_Cotton    | 0.9856 |
+|    Soy_Fallow    | 0.895  |
++------------------+--------+
+
+
+
+##################################################################
+########  Results After Standard Scaler - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 1 - start ########
+##################################################################
+
+After Bayesian Exclusion 1 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9579  |  0.9602   | 0.9579 |  0.9581  |
+|     2     |  0.9614  |  0.9635   | 0.9614 |  0.9613  |
+|     3     |  0.9575  |  0.9601   | 0.9575 |  0.9575  |
+|     4     |  0.9573  |  0.9599   | 0.9573 |  0.9574  |
+|     5     |  0.9571  |  0.9591   | 0.9571 |  0.9572  |
+|     6     |  0.9598  |  0.9616   | 0.9598 |  0.9598  |
+|     7     |  0.9563  |  0.9589   | 0.9563 |  0.9563  |
+|     8     |  0.959   |  0.9611   | 0.959  |  0.959   |
+|     9     |  0.9587  |  0.9607   | 0.9587 |  0.9586  |
+|    10     |  0.9583  |  0.9607   | 0.9583 |  0.9584  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 1 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9583 |
+| Accuracy Std Dev  | 0.0014 |
+|  Precision Mean   | 0.9606 |
+| Precision Std Dev | 0.0012 |
+|    Recall Mean    | 0.9583 |
+|  Recall Std Dev   | 0.0014 |
+|   F1-Score Mean   | 0.9583 |
+| F1-Score Std Dev  | 0.0014 |
++-------------------+--------+
+
+After Bayesian Exclusion 1 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9723 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9989 |
+|  Millet_Cotton   | 0.9994 |
+|     Pasture      | 0.9875 |
+|  Rocky_Savanna   | 0.9874 |
+|     Savanna      | 0.9915 |
+| Savanna_Parkland | 0.9991 |
+|   Silviculture   | 0.9983 |
+|     Soy_Corn     | 0.9912 |
+|    Soy_Cotton    | 0.9981 |
+|    Soy_Fallow    | 0.9929 |
++------------------+--------+
+
+After Bayesian Exclusion 1 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.8923 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9687 |
+|  Millet_Cotton   | 0.9828 |
+|     Pasture      | 0.9788 |
+|  Rocky_Savanna   | 0.9959 |
+|     Savanna      | 0.9744 |
+| Savanna_Parkland | 0.9944 |
+|   Silviculture   | 0.9878 |
+|     Soy_Corn     | 0.9323 |
+|    Soy_Cotton    | 0.988  |
+|    Soy_Fallow    | 0.979  |
++------------------+--------+
+
+After Bayesian Exclusion 1 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9807 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9352 |
+|  Millet_Cotton   | 0.9206 |
+|     Pasture      | 0.9324 |
+|  Rocky_Savanna   | 0.9248 |
+|     Savanna      | 0.9795 |
+| Savanna_Parkland | 0.9899 |
+|   Silviculture   | 0.8024 |
+|     Soy_Corn     | 0.9822 |
+|    Soy_Cotton    | 0.9894 |
+|    Soy_Fallow    | 0.8456 |
++------------------+--------+
+
+After Bayesian Exclusion 1 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9344 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.951  |
+|  Millet_Cotton   | 0.9496 |
+|     Pasture      | 0.955  |
+|  Rocky_Savanna   | 0.959  |
+|     Savanna      | 0.9769 |
+| Savanna_Parkland | 0.9921 |
+|   Silviculture   | 0.8846 |
+|     Soy_Corn     | 0.9566 |
+|    Soy_Cotton    | 0.9887 |
+|    Soy_Fallow    | 0.9072 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 1 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 2 - start ########
+##################################################################
+
+After Bayesian Exclusion 2 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9602  |   0.962   | 0.9602 |  0.9601  |
+|     2     |  0.9612  |  0.9629   | 0.9612 |  0.9611  |
+|     3     |  0.966   |  0.9679   | 0.966  |  0.966   |
+|     4     |  0.9668  |  0.9687   | 0.9668 |  0.9667  |
+|     5     |  0.961   |   0.963   | 0.961  |  0.9609  |
+|     6     |  0.9627  |  0.9645   | 0.9627 |  0.9627  |
+|     7     |  0.9544  |  0.9566   | 0.9544 |  0.9543  |
+|     8     |  0.9641  |   0.966   | 0.9641 |  0.9641  |
+|     9     |  0.9556  |  0.9585   | 0.9556 |  0.9556  |
+|    10     |  0.9643  |  0.9659   | 0.9643 |  0.9642  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 2 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9616 |
+| Accuracy Std Dev  | 0.0039 |
+|  Precision Mean   | 0.9636 |
+| Precision Std Dev | 0.0037 |
+|    Recall Mean    | 0.9616 |
+|  Recall Std Dev   | 0.0039 |
+|   F1-Score Mean   | 0.9616 |
+| F1-Score Std Dev  | 0.0039 |
++-------------------+--------+
+
+After Bayesian Exclusion 2 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9742 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.999  |
+|  Millet_Cotton   | 0.9995 |
+|     Pasture      | 0.9891 |
+|  Rocky_Savanna   | 0.9881 |
+|     Savanna      | 0.9922 |
+| Savanna_Parkland | 0.9994 |
+|   Silviculture   | 0.9983 |
+|     Soy_Corn     | 0.9919 |
+|    Soy_Cotton    | 0.9986 |
+|    Soy_Fallow    | 0.993  |
++------------------+--------+
+
+After Bayesian Exclusion 2 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9004 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9629 |
+|  Millet_Cotton   | 0.9881 |
+|     Pasture      | 0.9816 |
+|  Rocky_Savanna   | 0.9966 |
+|     Savanna      | 0.9751 |
+| Savanna_Parkland | 0.997  |
+|   Silviculture   | 0.9964 |
+|     Soy_Corn     | 0.9348 |
+|    Soy_Cotton    | 0.9923 |
+|    Soy_Fallow    | 0.981  |
++------------------+--------+
+
+After Bayesian Exclusion 2 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9812 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9481 |
+|  Millet_Cotton   | 0.9152 |
+|     Pasture      | 0.9397 |
+|  Rocky_Savanna   | 0.9293 |
+|     Savanna      | 0.9827 |
+| Savanna_Parkland | 0.9913 |
+|   Silviculture   | 0.7906 |
+|     Soy_Corn     | 0.9868 |
+|    Soy_Cotton    | 0.9913 |
+|    Soy_Fallow    | 0.8436 |
++------------------+--------+
+
+After Bayesian Exclusion 2 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9391 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9551 |
+|  Millet_Cotton   | 0.9496 |
+|     Pasture      | 0.9602 |
+|  Rocky_Savanna   | 0.9617 |
+|     Savanna      | 0.9788 |
+| Savanna_Parkland | 0.9941 |
+|   Silviculture   | 0.8804 |
+|     Soy_Corn     | 0.9601 |
+|    Soy_Cotton    | 0.9918 |
+|    Soy_Fallow    | 0.9069 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 2 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 3 - start ########
+##################################################################
+
+After Bayesian Exclusion 3 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9636  |  0.9652   | 0.9636 |  0.9637  |
+|     2     |  0.9697  |  0.9711   | 0.9697 |  0.9696  |
+|     3     |  0.9688  |  0.9705   | 0.9688 |  0.9688  |
+|     4     |  0.9632  |  0.9648   | 0.9632 |  0.9631  |
+|     5     |  0.9598  |  0.9622   | 0.9598 |  0.9599  |
+|     6     |  0.9644  |  0.9659   | 0.9644 |  0.9642  |
+|     7     |  0.9605  |   0.963   | 0.9605 |  0.9605  |
+|     8     |  0.9674  |  0.9685   | 0.9674 |  0.9673  |
+|     9     |  0.9648  |  0.9666   | 0.9648 |  0.9648  |
+|    10     |  0.9632  |   0.965   | 0.9632 |  0.9632  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 3 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9645 |
+| Accuracy Std Dev  | 0.0031 |
+|  Precision Mean   | 0.9663 |
+| Precision Std Dev | 0.0028 |
+|    Recall Mean    | 0.9645 |
+|  Recall Std Dev   | 0.0031 |
+|   F1-Score Mean   | 0.9645 |
+| F1-Score Std Dev  | 0.0031 |
++-------------------+--------+
+
+After Bayesian Exclusion 3 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9757 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9991 |
+|  Millet_Cotton   | 0.9995 |
+|     Pasture      | 0.9909 |
+|  Rocky_Savanna   | 0.9883 |
+|     Savanna      | 0.9931 |
+| Savanna_Parkland | 0.9992 |
+|   Silviculture   | 0.9983 |
+|     Soy_Corn     | 0.9926 |
+|    Soy_Cotton    | 0.9987 |
+|    Soy_Fallow    | 0.9937 |
++------------------+--------+
+
+After Bayesian Exclusion 3 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9065 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.961  |
+|  Millet_Cotton   |  1.0   |
+|     Pasture      | 0.9851 |
+|  Rocky_Savanna   | 0.996  |
+|     Savanna      | 0.9788 |
+| Savanna_Parkland | 0.9936 |
+|   Silviculture   | 0.9934 |
+|     Soy_Corn     | 0.9396 |
+|    Soy_Cotton    | 0.9942 |
+|    Soy_Fallow    | 0.9819 |
++------------------+--------+
+
+After Bayesian Exclusion 3 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9822 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9566 |
+|  Millet_Cotton   | 0.9105 |
+|     Pasture      | 0.9485 |
+|  Rocky_Savanna   | 0.931  |
+|     Savanna      | 0.984  |
+| Savanna_Parkland | 0.9917 |
+|   Silviculture   | 0.7981 |
+|     Soy_Corn     | 0.9886 |
+|    Soy_Cotton    | 0.9899 |
+|    Soy_Fallow    | 0.8559 |
++------------------+--------+
+
+After Bayesian Exclusion 3 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9428 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9584 |
+|  Millet_Cotton   | 0.952  |
+|     Pasture      | 0.9665 |
+|  Rocky_Savanna   | 0.9623 |
+|     Savanna      | 0.9813 |
+| Savanna_Parkland | 0.9926 |
+|   Silviculture   | 0.8844 |
+|     Soy_Corn     | 0.9634 |
+|    Soy_Cotton    | 0.992  |
+|    Soy_Fallow    | 0.9143 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 3 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 4 - start ########
+##################################################################
+
+After Bayesian Exclusion 4 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9667  |  0.9686   | 0.9667 |  0.9668  |
+|     2     |  0.9727  |  0.9736   | 0.9727 |  0.9726  |
+|     3     |  0.968   |  0.9699   | 0.968  |  0.9681  |
+|     4     |  0.968   |  0.9693   | 0.968  |  0.9678  |
+|     5     |  0.9678  |  0.9694   | 0.9678 |  0.9676  |
+|     6     |  0.968   |  0.9694   | 0.968  |  0.9679  |
+|     7     |  0.9707  |  0.9718   | 0.9707 |  0.9706  |
+|     8     |  0.9652  |   0.967   | 0.9652 |  0.9651  |
+|     9     |  0.965   |  0.9664   | 0.965  |  0.9651  |
+|    10     |  0.9682  |  0.9696   | 0.9682 |  0.968   |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 4 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.968  |
+| Accuracy Std Dev  | 0.0022 |
+|  Precision Mean   | 0.9695 |
+| Precision Std Dev | 0.002  |
+|    Recall Mean    | 0.968  |
+|  Recall Std Dev   | 0.0022 |
+|   F1-Score Mean   | 0.968  |
+| F1-Score Std Dev  | 0.0021 |
++-------------------+--------+
+
+After Bayesian Exclusion 4 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9777 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9992 |
+|  Millet_Cotton   | 0.9996 |
+|     Pasture      | 0.9923 |
+|  Rocky_Savanna   | 0.9894 |
+|     Savanna      | 0.9933 |
+| Savanna_Parkland | 0.9992 |
+|   Silviculture   | 0.9984 |
+|     Soy_Corn     | 0.9936 |
+|    Soy_Cotton    | 0.9991 |
+|    Soy_Fallow    | 0.9942 |
++------------------+--------+
+
+After Bayesian Exclusion 4 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9147 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.961  |
+|  Millet_Cotton   | 0.9957 |
+|     Pasture      | 0.9884 |
+|  Rocky_Savanna   | 0.9966 |
+|     Savanna      | 0.9792 |
+| Savanna_Parkland | 0.9938 |
+|   Silviculture   | 0.9905 |
+|     Soy_Corn     | 0.9461 |
+|    Soy_Cotton    | 0.9967 |
+|    Soy_Fallow    | 0.9849 |
++------------------+--------+
+
+After Bayesian Exclusion 4 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9827 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9639 |
+|  Millet_Cotton   | 0.9245 |
+|     Pasture      | 0.9555 |
+|  Rocky_Savanna   | 0.9368 |
+|     Savanna      | 0.9852 |
+| Savanna_Parkland | 0.9915 |
+|   Silviculture   |  0.8   |
+|     Soy_Corn     | 0.9923 |
+|    Soy_Cotton    | 0.9928 |
+|    Soy_Fallow    | 0.8666 |
++------------------+--------+
+
+After Bayesian Exclusion 4 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9475 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9622 |
+|  Millet_Cotton   | 0.9574 |
+|     Pasture      | 0.9716 |
+|  Rocky_Savanna   | 0.9658 |
+|     Savanna      | 0.9822 |
+| Savanna_Parkland | 0.9927 |
+|   Silviculture   | 0.8839 |
+|     Soy_Corn     | 0.9686 |
+|    Soy_Cotton    | 0.9947 |
+|    Soy_Fallow    | 0.9215 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 4 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 5 - start ########
+##################################################################
+
+After Bayesian Exclusion 5 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9682  |  0.9694   | 0.9682 |  0.9681  |
+|     2     |  0.9719  |  0.9729   | 0.9719 |  0.9719  |
+|     3     |  0.9738  |  0.9749   | 0.9738 |  0.9737  |
+|     4     |  0.967   |  0.9684   | 0.967  |  0.967   |
+|     5     |  0.973   |  0.9739   | 0.973  |  0.9729  |
+|     6     |  0.9723  |  0.9734   | 0.9723 |  0.9723  |
+|     7     |  0.9697  |   0.971   | 0.9697 |  0.9697  |
+|     8     |  0.9674  |  0.9689   | 0.9674 |  0.9673  |
+|     9     |  0.9697  |  0.9713   | 0.9697 |  0.9697  |
+|    10     |  0.9687  |  0.9702   | 0.9687 |  0.9687  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 5 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9702 |
+| Accuracy Std Dev  | 0.0023 |
+|  Precision Mean   | 0.9714 |
+| Precision Std Dev | 0.0021 |
+|    Recall Mean    | 0.9702 |
+|  Recall Std Dev   | 0.0023 |
+|   F1-Score Mean   | 0.9701 |
+| F1-Score Std Dev  | 0.0023 |
++-------------------+--------+
+
+After Bayesian Exclusion 5 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9796 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9992 |
+|  Millet_Cotton   | 0.9997 |
+|     Pasture      | 0.9929 |
+|  Rocky_Savanna   | 0.9902 |
+|     Savanna      | 0.9938 |
+| Savanna_Parkland | 0.9991 |
+|   Silviculture   | 0.9985 |
+|     Soy_Corn     | 0.9938 |
+|    Soy_Cotton    | 0.999  |
+|    Soy_Fallow    | 0.9945 |
++------------------+--------+
+
+After Bayesian Exclusion 5 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.922  |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9619 |
+|  Millet_Cotton   |  1.0   |
+|     Pasture      | 0.9887 |
+|  Rocky_Savanna   | 0.9963 |
+|     Savanna      | 0.9802 |
+| Savanna_Parkland | 0.995  |
+|   Silviculture   | 0.9908 |
+|     Soy_Corn     | 0.9478 |
+|    Soy_Cotton    | 0.9956 |
+|    Soy_Fallow    | 0.9888 |
++------------------+--------+
+
+After Bayesian Exclusion 5 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9839 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9662 |
+|  Millet_Cotton   | 0.9257 |
+|     Pasture      | 0.9591 |
+|  Rocky_Savanna   | 0.9421 |
+|     Savanna      | 0.9868 |
+| Savanna_Parkland | 0.9892 |
+|   Silviculture   | 0.819  |
+|     Soy_Corn     | 0.9922 |
+|    Soy_Cotton    | 0.9927 |
+|    Soy_Fallow    | 0.8696 |
++------------------+--------+
+
+After Bayesian Exclusion 5 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9519 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9634 |
+|  Millet_Cotton   | 0.9605 |
+|     Pasture      | 0.9736 |
+|  Rocky_Savanna   | 0.9685 |
+|     Savanna      | 0.9834 |
+| Savanna_Parkland | 0.992  |
+|   Silviculture   | 0.8952 |
+|     Soy_Corn     | 0.9695 |
+|    Soy_Cotton    | 0.9942 |
+|    Soy_Fallow    | 0.9252 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 5 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 6 - start ########
+##################################################################
+
+After Bayesian Exclusion 6 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9692  |  0.9707   | 0.9692 |  0.9692  |
+|     2     |  0.9716  |  0.9728   | 0.9716 |  0.9714  |
+|     3     |  0.9731  |  0.9739   | 0.9731 |  0.973   |
+|     4     |  0.9764  |  0.9771   | 0.9764 |  0.9764  |
+|     5     |  0.9705  |  0.9718   | 0.9705 |  0.9704  |
+|     6     |  0.9712  |  0.9722   | 0.9712 |  0.9711  |
+|     7     |  0.9718  |   0.973   | 0.9718 |  0.9718  |
+|     8     |  0.9725  |  0.9736   | 0.9725 |  0.9724  |
+|     9     |  0.9723  |  0.9739   | 0.9723 |  0.9722  |
+|    10     |  0.9742  |  0.9753   | 0.9742 |  0.9742  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 6 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9723 |
+| Accuracy Std Dev  | 0.0019 |
+|  Precision Mean   | 0.9734 |
+| Precision Std Dev | 0.0017 |
+|    Recall Mean    | 0.9723 |
+|  Recall Std Dev   | 0.0019 |
+|   F1-Score Mean   | 0.9722 |
+| F1-Score Std Dev  | 0.0019 |
++-------------------+--------+
+
+After Bayesian Exclusion 6 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9809 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9994 |
+|  Millet_Cotton   | 0.9997 |
+|     Pasture      | 0.9937 |
+|  Rocky_Savanna   | 0.9907 |
+|     Savanna      | 0.9943 |
+| Savanna_Parkland | 0.9993 |
+|   Silviculture   | 0.9984 |
+|     Soy_Corn     | 0.9941 |
+|    Soy_Cotton    | 0.9993 |
+|    Soy_Fallow    | 0.9947 |
++------------------+--------+
+
+After Bayesian Exclusion 6 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.926  |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   |  0.97  |
+|  Millet_Cotton   |  1.0   |
+|     Pasture      | 0.9907 |
+|  Rocky_Savanna   | 0.9973 |
+|     Savanna      | 0.9822 |
+| Savanna_Parkland | 0.9957 |
+|   Silviculture   | 0.9926 |
+|     Soy_Corn     | 0.9504 |
+|    Soy_Cotton    | 0.9963 |
+|    Soy_Fallow    | 0.988  |
++------------------+--------+
+
+After Bayesian Exclusion 6 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9859 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9732 |
+|  Millet_Cotton   | 0.925  |
+|     Pasture      | 0.9631 |
+|  Rocky_Savanna   | 0.9447 |
+|     Savanna      | 0.9877 |
+| Savanna_Parkland | 0.9923 |
+|   Silviculture   | 0.7886 |
+|     Soy_Corn     | 0.9926 |
+|    Soy_Cotton    | 0.9947 |
+|    Soy_Fallow    | 0.8742 |
++------------------+--------+
+
+After Bayesian Exclusion 6 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.955  |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9712 |
+|  Millet_Cotton   | 0.9594 |
+|     Pasture      | 0.9767 |
+|  Rocky_Savanna   | 0.9703 |
+|     Savanna      | 0.9849 |
+| Savanna_Parkland | 0.994  |
+|   Silviculture   | 0.8779 |
+|     Soy_Corn     | 0.971  |
+|    Soy_Cotton    | 0.9955 |
+|    Soy_Fallow    | 0.9275 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 6 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 7 - start ########
+##################################################################
+
+After Bayesian Exclusion 7 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9746  |  0.9755   | 0.9746 |  0.9746  |
+|     2     |  0.9742  |  0.9752   | 0.9742 |  0.9741  |
+|     3     |  0.9781  |  0.9786   | 0.9781 |  0.978   |
+|     4     |  0.9755  |  0.9762   | 0.9755 |  0.9754  |
+|     5     |  0.9742  |  0.9751   | 0.9742 |  0.9741  |
+|     6     |  0.9737  |  0.9748   | 0.9737 |  0.9738  |
+|     7     |  0.9709  |  0.9722   | 0.9709 |  0.9709  |
+|     8     |  0.974   |  0.9749   | 0.974  |  0.9739  |
+|     9     |  0.9733  |  0.9744   | 0.9733 |  0.9732  |
+|    10     |  0.9735  |  0.9746   | 0.9735 |  0.9734  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 7 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9742 |
+| Accuracy Std Dev  | 0.0017 |
+|  Precision Mean   | 0.9751 |
+| Precision Std Dev | 0.0015 |
+|    Recall Mean    | 0.9742 |
+|  Recall Std Dev   | 0.0017 |
+|   F1-Score Mean   | 0.9741 |
+| F1-Score Std Dev  | 0.0017 |
++-------------------+--------+
+
+After Bayesian Exclusion 7 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9824 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9994 |
+|  Millet_Cotton   | 0.9997 |
+|     Pasture      | 0.9943 |
+|  Rocky_Savanna   | 0.9912 |
+|     Savanna      | 0.9944 |
+| Savanna_Parkland | 0.9992 |
+|   Silviculture   | 0.9984 |
+|     Soy_Corn     | 0.9947 |
+|    Soy_Cotton    | 0.9992 |
+|    Soy_Fallow    | 0.9954 |
++------------------+--------+
+
+After Bayesian Exclusion 7 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.932  |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9674 |
+|  Millet_Cotton   |  1.0   |
+|     Pasture      | 0.9895 |
+|  Rocky_Savanna   | 0.9976 |
+|     Savanna      | 0.9827 |
+| Savanna_Parkland | 0.9946 |
+|   Silviculture   | 0.989  |
+|     Soy_Corn     | 0.956  |
+|    Soy_Cotton    | 0.9968 |
+|    Soy_Fallow    | 0.9898 |
++------------------+--------+
+
+After Bayesian Exclusion 7 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9865 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.975  |
+|  Millet_Cotton   | 0.9292 |
+|     Pasture      | 0.9683 |
+|  Rocky_Savanna   | 0.9475 |
+|     Savanna      | 0.9879 |
+| Savanna_Parkland | 0.9919 |
+|   Silviculture   | 0.7951 |
+|     Soy_Corn     | 0.993  |
+|    Soy_Cotton    | 0.9933 |
+|    Soy_Fallow    | 0.8885 |
++------------------+--------+
+
+After Bayesian Exclusion 7 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9585 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9709 |
+|  Millet_Cotton   | 0.9625 |
+|     Pasture      | 0.9787 |
+|  Rocky_Savanna   | 0.9719 |
+|     Savanna      | 0.9853 |
+| Savanna_Parkland | 0.9932 |
+|   Silviculture   | 0.8811 |
+|     Soy_Corn     | 0.9741 |
+|    Soy_Cotton    | 0.995  |
+|    Soy_Fallow    | 0.9363 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 7 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 8 - start ########
+##################################################################
+
+After Bayesian Exclusion 8 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9763  |  0.9772   | 0.9763 |  0.9762  |
+|     2     |  0.9779  |  0.9787   | 0.9779 |  0.9778  |
+|     3     |  0.9757  |  0.9767   | 0.9757 |  0.9757  |
+|     4     |  0.9805  |  0.9812   | 0.9805 |  0.9805  |
+|     5     |  0.9752  |  0.9762   | 0.9752 |  0.9752  |
+|     6     |  0.9739  |  0.9752   | 0.9739 |  0.9739  |
+|     7     |  0.9715  |  0.9727   | 0.9715 |  0.9714  |
+|     8     |  0.9783  |   0.979   | 0.9783 |  0.9783  |
+|     9     |  0.973   |  0.9739   | 0.973  |  0.973   |
+|    10     |  0.9755  |  0.9762   | 0.9755 |  0.9754  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 8 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9758 |
+| Accuracy Std Dev  | 0.0025 |
+|  Precision Mean   | 0.9767 |
+| Precision Std Dev | 0.0024 |
+|    Recall Mean    | 0.9758 |
+|  Recall Std Dev   | 0.0025 |
+|   F1-Score Mean   | 0.9757 |
+| F1-Score Std Dev  | 0.0025 |
++-------------------+--------+
+
+After Bayesian Exclusion 8 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9831 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9995 |
+|  Millet_Cotton   | 0.9997 |
+|     Pasture      | 0.995  |
+|  Rocky_Savanna   | 0.9912 |
+|     Savanna      | 0.995  |
+| Savanna_Parkland | 0.9992 |
+|   Silviculture   | 0.9985 |
+|     Soy_Corn     | 0.9953 |
+|    Soy_Cotton    | 0.9993 |
+|    Soy_Fallow    | 0.9959 |
++------------------+--------+
+
+After Bayesian Exclusion 8 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9334 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9694 |
+|  Millet_Cotton   |  1.0   |
+|     Pasture      | 0.9917 |
+|  Rocky_Savanna   | 0.9974 |
+|     Savanna      | 0.9847 |
+| Savanna_Parkland | 0.9953 |
+|   Silviculture   | 0.9922 |
+|     Soy_Corn     | 0.9606 |
+|    Soy_Cotton    | 0.9973 |
+|    Soy_Fallow    | 0.9904 |
++------------------+--------+
+
+After Bayesian Exclusion 8 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9883 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9812 |
+|  Millet_Cotton   | 0.9289 |
+|     Pasture      | 0.9712 |
+|  Rocky_Savanna   | 0.9479 |
+|     Savanna      | 0.9887 |
+| Savanna_Parkland | 0.9906 |
+|   Silviculture   | 0.7962 |
+|     Soy_Corn     | 0.9938 |
+|    Soy_Cotton    | 0.9938 |
+|    Soy_Fallow    | 0.9011 |
++------------------+--------+
+
+After Bayesian Exclusion 8 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  |  0.96  |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.975  |
+|  Millet_Cotton   | 0.9624 |
+|     Pasture      | 0.9813 |
+|  Rocky_Savanna   | 0.972  |
+|     Savanna      | 0.9867 |
+| Savanna_Parkland | 0.9929 |
+|   Silviculture   | 0.883  |
+|     Soy_Corn     | 0.9769 |
+|    Soy_Cotton    | 0.9955 |
+|    Soy_Fallow    | 0.9435 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 8 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 9 - start ########
+##################################################################
+
+After Bayesian Exclusion 9 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9768  |  0.9775   | 0.9768 |  0.9768  |
+|     2     |  0.9828  |  0.9833   | 0.9828 |  0.9828  |
+|     3     |  0.9759  |  0.9769   | 0.9759 |  0.9759  |
+|     4     |  0.9746  |  0.9754   | 0.9746 |  0.9746  |
+|     5     |  0.9739  |  0.9749   | 0.9739 |  0.9738  |
+|     6     |  0.9753  |  0.9761   | 0.9753 |  0.9752  |
+|     7     |  0.9779  |  0.9786   | 0.9779 |  0.978   |
+|     8     |  0.9797  |  0.9802   | 0.9797 |  0.9796  |
+|     9     |  0.9768  |  0.9777   | 0.9768 |  0.9768  |
+|    10     |  0.9808  |  0.9814   | 0.9808 |  0.9808  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 9 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9775 |
+| Accuracy Std Dev  | 0.0027 |
+|  Precision Mean   | 0.9782 |
+| Precision Std Dev | 0.0026 |
+|    Recall Mean    | 0.9775 |
+|  Recall Std Dev   | 0.0027 |
+|   F1-Score Mean   | 0.9774 |
+| F1-Score Std Dev  | 0.0027 |
++-------------------+--------+
+
+After Bayesian Exclusion 9 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9842 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9995 |
+|  Millet_Cotton   | 0.9997 |
+|     Pasture      | 0.9955 |
+|  Rocky_Savanna   | 0.9915 |
+|     Savanna      | 0.9953 |
+| Savanna_Parkland | 0.9992 |
+|   Silviculture   | 0.9986 |
+|     Soy_Corn     | 0.9958 |
+|    Soy_Cotton    | 0.9993 |
+|    Soy_Fallow    | 0.9963 |
++------------------+--------+
+
+After Bayesian Exclusion 9 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9385 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9739 |
+|  Millet_Cotton   |  1.0   |
+|     Pasture      | 0.9918 |
+|  Rocky_Savanna   | 0.9974 |
+|     Savanna      | 0.9852 |
+| Savanna_Parkland | 0.9937 |
+|   Silviculture   | 0.9889 |
+|     Soy_Corn     | 0.9645 |
+|    Soy_Cotton    | 0.9978 |
+|    Soy_Fallow    | 0.9902 |
++------------------+--------+
+
+After Bayesian Exclusion 9 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9881 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9798 |
+|  Millet_Cotton   | 0.9368 |
+|     Pasture      | 0.9747 |
+|  Rocky_Savanna   | 0.9501 |
+|     Savanna      | 0.9897 |
+| Savanna_Parkland | 0.9917 |
+|   Silviculture   | 0.8133 |
+|     Soy_Corn     | 0.9949 |
+|    Soy_Cotton    | 0.9935 |
+|    Soy_Fallow    | 0.9099 |
++------------------+--------+
+
+After Bayesian Exclusion 9 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9627 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9766 |
+|  Millet_Cotton   | 0.9663 |
+|     Pasture      | 0.9832 |
+|  Rocky_Savanna   | 0.9731 |
+|     Savanna      | 0.9874 |
+| Savanna_Parkland | 0.9927 |
+|   Silviculture   | 0.8918 |
+|     Soy_Corn     | 0.9794 |
+|    Soy_Cotton    | 0.9956 |
+|    Soy_Fallow    | 0.9483 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 9 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 10 - start ########
+##################################################################
+
+After Bayesian Exclusion 10 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9832  |  0.9835   | 0.9832 |  0.9831  |
+|     2     |  0.9782  |  0.9789   | 0.9782 |  0.9781  |
+|     3     |  0.9775  |  0.9785   | 0.9775 |  0.9774  |
+|     4     |  0.9762  |  0.9768   | 0.9762 |  0.9759  |
+|     5     |  0.9796  |  0.9802   | 0.9796 |  0.9795  |
+|     6     |  0.9753  |  0.9763   | 0.9753 |  0.9753  |
+|     7     |  0.9791  |  0.9797   | 0.9791 |  0.9791  |
+|     8     |  0.9778  |  0.9785   | 0.9778 |  0.9777  |
+|     9     |  0.9811  |  0.9817   | 0.9811 |  0.9811  |
+|    10     |  0.9818  |  0.9824   | 0.9818 |  0.9818  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 10 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.979  |
+| Accuracy Std Dev  | 0.0024 |
+|  Precision Mean   | 0.9796 |
+| Precision Std Dev | 0.0022 |
+|    Recall Mean    | 0.979  |
+|  Recall Std Dev   | 0.0024 |
+|   F1-Score Mean   | 0.9789 |
+| F1-Score Std Dev  | 0.0024 |
++-------------------+--------+
+
+After Bayesian Exclusion 10 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9853 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9995 |
+|  Millet_Cotton   | 0.9997 |
+|     Pasture      | 0.9966 |
+|  Rocky_Savanna   | 0.9919 |
+|     Savanna      | 0.9953 |
+| Savanna_Parkland | 0.9992 |
+|   Silviculture   | 0.9985 |
+|     Soy_Corn     | 0.996  |
+|    Soy_Cotton    | 0.9992 |
+|    Soy_Fallow    | 0.9967 |
++------------------+--------+
+
+After Bayesian Exclusion 10 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9425 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9731 |
+|  Millet_Cotton   |  1.0   |
+|     Pasture      | 0.9934 |
+|  Rocky_Savanna   | 0.9975 |
+|     Savanna      | 0.9854 |
+| Savanna_Parkland | 0.9956 |
+|   Silviculture   | 0.9964 |
+|     Soy_Corn     | 0.9664 |
+|    Soy_Cotton    | 0.9975 |
+|    Soy_Fallow    | 0.9908 |
++------------------+--------+
+
+After Bayesian Exclusion 10 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9891 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9773 |
+|  Millet_Cotton   | 0.9314 |
+|     Pasture      | 0.9809 |
+|  Rocky_Savanna   | 0.9528 |
+|     Savanna      | 0.9896 |
+| Savanna_Parkland | 0.9901 |
+|   Silviculture   | 0.7909 |
+|     Soy_Corn     | 0.9951 |
+|    Soy_Cotton    | 0.9932 |
+|    Soy_Fallow    | 0.9178 |
++------------------+--------+
+
+After Bayesian Exclusion 10 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9652 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9751 |
+|  Millet_Cotton   | 0.9638 |
+|     Pasture      | 0.9871 |
+|  Rocky_Savanna   | 0.9747 |
+|     Savanna      | 0.9875 |
+| Savanna_Parkland | 0.9929 |
+|   Silviculture   |  0.88  |
+|     Soy_Corn     | 0.9805 |
+|    Soy_Cotton    | 0.9953 |
+|    Soy_Fallow    | 0.9527 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 10 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 11 - start ########
+##################################################################
+
+After Bayesian Exclusion 11 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9828  |  0.9832   | 0.9828 |  0.9828  |
+|     2     |  0.9815  |   0.982   | 0.9815 |  0.9815  |
+|     3     |  0.9801  |  0.9807   | 0.9801 |  0.9801  |
+|     4     |  0.9799  |  0.9802   | 0.9799 |  0.9798  |
+|     5     |  0.9753  |  0.9763   | 0.9753 |  0.9753  |
+|     6     |  0.9796  |  0.9802   | 0.9796 |  0.9796  |
+|     7     |  0.9819  |  0.9824   | 0.9819 |  0.9818  |
+|     8     |  0.981   |  0.9817   | 0.981  |  0.9809  |
+|     9     |  0.9808  |  0.9814   | 0.9808 |  0.9807  |
+|    10     |  0.9772  |   0.978   | 0.9772 |  0.9771  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 11 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   |  0.98  |
+| Accuracy Std Dev  | 0.0021 |
+|  Precision Mean   | 0.9806 |
+| Precision Std Dev | 0.002  |
+|    Recall Mean    |  0.98  |
+|  Recall Std Dev   | 0.0021 |
+|   F1-Score Mean   | 0.9799 |
+| F1-Score Std Dev  | 0.0021 |
++-------------------+--------+
+
+After Bayesian Exclusion 11 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.986  |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9997 |
+|  Millet_Cotton   | 0.9999 |
+|     Pasture      | 0.9968 |
+|  Rocky_Savanna   | 0.9922 |
+|     Savanna      | 0.9955 |
+| Savanna_Parkland | 0.9993 |
+|   Silviculture   | 0.9986 |
+|     Soy_Corn     | 0.996  |
+|    Soy_Cotton    | 0.9993 |
+|    Soy_Fallow    | 0.9967 |
++------------------+--------+
+
+After Bayesian Exclusion 11 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9452 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9911 |
+|  Millet_Cotton   |  1.0   |
+|     Pasture      | 0.9933 |
+|  Rocky_Savanna   | 0.9981 |
+|     Savanna      | 0.986  |
+| Savanna_Parkland | 0.996  |
+|   Silviculture   | 0.9886 |
+|     Soy_Corn     | 0.9667 |
+|    Soy_Cotton    | 0.9978 |
+|    Soy_Fallow    | 0.9914 |
++------------------+--------+
+
+After Bayesian Exclusion 11 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9895 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9796 |
+|  Millet_Cotton   | 0.9754 |
+|     Pasture      | 0.9827 |
+|  Rocky_Savanna   | 0.9542 |
+|     Savanna      | 0.9902 |
+| Savanna_Parkland | 0.9921 |
+|   Silviculture   | 0.804  |
+|     Soy_Corn     | 0.9951 |
+|    Soy_Cotton    | 0.9934 |
+|    Soy_Fallow    | 0.9167 |
++------------------+--------+
+
+After Bayesian Exclusion 11 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9668 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9851 |
+|  Millet_Cotton   | 0.9871 |
+|     Pasture      | 0.988  |
+|  Rocky_Savanna   | 0.9756 |
+|     Savanna      | 0.9881 |
+| Savanna_Parkland | 0.9941 |
+|   Silviculture   | 0.8859 |
+|     Soy_Corn     | 0.9807 |
+|    Soy_Cotton    | 0.9956 |
+|    Soy_Fallow    | 0.9524 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 11 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 12 - start ########
+##################################################################
+
+After Bayesian Exclusion 12 — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9827  |  0.9832   | 0.9827 |  0.9827  |
+|     2     |  0.9838  |  0.9843   | 0.9838 |  0.9837  |
+|     3     |  0.9804  |  0.9809   | 0.9804 |  0.9804  |
+|     4     |  0.9809  |  0.9813   | 0.9809 |  0.9808  |
+|     5     |  0.9816  |  0.9819   | 0.9816 |  0.9814  |
+|     6     |  0.9834  |  0.9837   | 0.9834 |  0.9833  |
+|     7     |  0.9806  |  0.9813   | 0.9806 |  0.9806  |
+|     8     |  0.9838  |  0.9841   | 0.9838 |  0.9837  |
+|     9     |  0.9827  |  0.9832   | 0.9827 |  0.9827  |
+|    10     |  0.9781  |  0.9787   | 0.9781 |  0.9781  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 12 — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9818 |
+| Accuracy Std Dev  | 0.0017 |
+|  Precision Mean   | 0.9823 |
+| Precision Std Dev | 0.0017 |
+|    Recall Mean    | 0.9818 |
+|  Recall Std Dev   | 0.0017 |
+|   F1-Score Mean   | 0.9817 |
+| F1-Score Std Dev  | 0.0017 |
++-------------------+--------+
+
+After Bayesian Exclusion 12 — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9873 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9998 |
+|  Millet_Cotton   |  1.0   |
+|     Pasture      | 0.9974 |
+|  Rocky_Savanna   | 0.9928 |
+|     Savanna      | 0.9959 |
+| Savanna_Parkland | 0.9994 |
+|   Silviculture   | 0.9986 |
+|     Soy_Corn     | 0.9963 |
+|    Soy_Cotton    | 0.9994 |
+|    Soy_Fallow    | 0.9969 |
++------------------+--------+
+
+After Bayesian Exclusion 12 — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9511 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9931 |
+|  Millet_Cotton   |  1.0   |
+|     Pasture      | 0.9933 |
+|  Rocky_Savanna   | 0.9985 |
+|     Savanna      | 0.9863 |
+| Savanna_Parkland | 0.9953 |
+|   Silviculture   | 0.9883 |
+|     Soy_Corn     | 0.9698 |
+|    Soy_Cotton    | 0.9986 |
+|    Soy_Fallow    | 0.9912 |
++------------------+--------+
+
+After Bayesian Exclusion 12 — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9895 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9863 |
+|  Millet_Cotton   | 0.9941 |
+|     Pasture      | 0.9875 |
+|  Rocky_Savanna   | 0.957  |
+|     Savanna      | 0.9918 |
+| Savanna_Parkland | 0.9936 |
+|   Silviculture   | 0.8065 |
+|     Soy_Corn     | 0.9941 |
+|    Soy_Cotton    | 0.9936 |
+|    Soy_Fallow    | 0.9222 |
++------------------+--------+
+
+After Bayesian Exclusion 12 — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9699 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9896 |
+|  Millet_Cotton   | 0.997  |
+|     Pasture      | 0.9904 |
+|  Rocky_Savanna   | 0.9773 |
+|     Savanna      | 0.989  |
+| Savanna_Parkland | 0.9944 |
+|   Silviculture   | 0.8869 |
+|     Soy_Corn     | 0.9818 |
+|    Soy_Cotton    | 0.9961 |
+|    Soy_Fallow    | 0.9552 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 12 - end ########
+##################################################################
+
+
+
+##################################################################
+########  Results for iteration number 12 (TUNED) - start ########
+##################################################################
+
+After Bayesian Exclusion 12 (TURBO) — Iteration Results
++-----------+----------+-----------+--------+----------+
+| Iteration | Accuracy | Precision | Recall | F1-Score |
++-----------+----------+-----------+--------+----------+
+|     1     |  0.9852  |  0.9856   | 0.9852 |  0.9852  |
+|     2     |  0.9854  |  0.9857   | 0.9854 |  0.9854  |
+|     3     |  0.9822  |  0.9827   | 0.9822 |  0.9822  |
+|     4     |  0.9847  |   0.985   | 0.9847 |  0.9847  |
+|     5     |  0.9831  |  0.9834   | 0.9831 |  0.9831  |
+|     6     |  0.9845  |  0.9847   | 0.9845 |  0.9845  |
+|     7     |  0.9838  |  0.9842   | 0.9838 |  0.9838  |
+|     8     |  0.9866  |  0.9868   | 0.9866 |  0.9865  |
+|     9     |  0.9847  |  0.9852   | 0.9847 |  0.9847  |
+|    10     |  0.9802  |  0.9807   | 0.9802 |  0.9801  |
++-----------+----------+-----------+--------+----------+
+
+After Bayesian Exclusion 12 (TURBO) — Summary Statistics
++-------------------+--------+
+|      Metric       | Value  |
++-------------------+--------+
+|   Accuracy Mean   | 0.9841 |
+| Accuracy Std Dev  | 0.0017 |
+|  Precision Mean   | 0.9844 |
+| Precision Std Dev | 0.0017 |
+|    Recall Mean    | 0.9841 |
+|  Recall Std Dev   | 0.0017 |
+|   F1-Score Mean   | 0.984  |
+| F1-Score Std Dev  | 0.0017 |
++-------------------+--------+
+
+After Bayesian Exclusion 12 (TURBO) — Accuracy by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9887 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9998 |
+|  Millet_Cotton   |  1.0   |
+|     Pasture      | 0.9977 |
+|  Rocky_Savanna   | 0.9931 |
+|     Savanna      | 0.9964 |
+| Savanna_Parkland | 0.9995 |
+|   Silviculture   | 0.999  |
+|     Soy_Corn     | 0.9971 |
+|    Soy_Cotton    | 0.9996 |
+|    Soy_Fallow    | 0.9973 |
++------------------+--------+
+
+After Bayesian Exclusion 12 (TURBO) — Precision by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9559 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9955 |
+|  Millet_Cotton   | 0.9944 |
+|     Pasture      | 0.9938 |
+|  Rocky_Savanna   | 0.998  |
+|     Savanna      | 0.9886 |
+| Savanna_Parkland | 0.9956 |
+|   Silviculture   | 0.9963 |
+|     Soy_Corn     | 0.9775 |
+|    Soy_Cotton    | 0.9981 |
+|    Soy_Fallow    | 0.9893 |
++------------------+--------+
+
+After Bayesian Exclusion 12 (TURBO) — Recall by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.9908 |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.984  |
+|  Millet_Cotton   | 0.9941 |
+|     Pasture      | 0.9892 |
+|  Rocky_Savanna   | 0.9597 |
+|     Savanna      | 0.9926 |
+| Savanna_Parkland | 0.9948 |
+|   Silviculture   | 0.8613 |
+|     Soy_Corn     | 0.9939 |
+|    Soy_Cotton    | 0.9969 |
+|    Soy_Fallow    | 0.9355 |
++------------------+--------+
+
+After Bayesian Exclusion 12 (TURBO) — F1 by label
++------------------+--------+
+|      label       |  mean  |
++------------------+--------+
+|  Dense_Woodland  | 0.973  |
+|      Dunes       |  1.0   |
+|  Fallow_Cotton   | 0.9896 |
+|  Millet_Cotton   | 0.9941 |
+|     Pasture      | 0.9915 |
+|  Rocky_Savanna   | 0.9784 |
+|     Savanna      | 0.9906 |
+| Savanna_Parkland | 0.9952 |
+|   Silviculture   | 0.9234 |
+|     Soy_Corn     | 0.9856 |
+|    Soy_Cotton    | 0.9975 |
+|    Soy_Fallow    | 0.9615 |
++------------------+--------+
+
+
+
+##################################################################
+########  Results for iteration number 12 (TUNED) - end ########
+##################################################################
+
