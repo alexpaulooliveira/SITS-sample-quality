@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+
+title: "SITS-sample-quality"
+type: software
+
+authors:
+  - family-names: "Oliveira"
+    given-names: "Alex Paulo Alves de"
+    affiliation: "Instituto Federal de Sergipe (IFS)"
+
+  - family-names: "Santos da Silva"
+    given-names: "Marco Aurélio"
+    affiliation: "Embrapa Tabuleiros Costeiros"
+
+  - family-names: "Navoni"
+    given-names: "Júlio Alejandro"
+    affiliation: "Universidade Federal do Rio Grande do Norte (UFRN)"
+
+repository-code: "https://github.com/alexpaulooliveira/SITS-sample-quality"
+
+date-released: 2026-09-28
+
+abstract: >-
+  Software for automated qualification and refinement of labelled training
+  samples used in satellite image time series (SITS) classification,
+  particularly for remote-sensing applications involving agricultural
+  mapping and land-use and land-cover mapping. The software implements an
+  integrated workflow comprising data preparation and standardization,
+  automated hyperparameter selection for Self-Organizing Maps (SOMs),
+  neural-network training, clustering of neurons into homogeneous
+  spectro-temporal regions, and assessment of sample-label consistency.
+  A Bayes-inspired heuristic based on empirical evidence is used to identify
+  and remove potentially noisy or incorrectly labelled observations,
+  producing refined training datasets. The software is implemented in Python
+  and exposes its functionality through a REST programming interface,
+  supporting parameterized and reproducible execution of the processing
+  workflow.
+
+keywords:
+  - "satellite image time series"
+  - "SITS"
+  - "remote sensing"
+  - "training data"
+  - "sample quality"
+  - "Self-Organizing Maps"
+  - "SOM"
+  - "clustering"
+  - "machine learning"
+  - "land-use and land-cover mapping"
