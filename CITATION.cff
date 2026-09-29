@@ -19,6 +19,8 @@ authors:
 
 repository-code: "https://github.com/alexpaulooliveira/SITS-sample-quality"
 
+version: "1.0.0"
+date-released: 2026-09-29
 
 abstract: >-
   Software for automated qualification and refinement of labelled training
