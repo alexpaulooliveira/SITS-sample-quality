@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains the source code, datasets, and computational outputs associated with a fully automated framework for refining labelled training data in satellite image time series (SITS).
+This repository contains the source code, dataset documentation, scripts, figures, and computational outputs associated with a fully automated framework for refining labelled training data in satellite image time series (SITS).
 
 The framework is designed to identify and remove samples that are inconsistent with their local spectro-temporal context. It builds on Self-Organizing Maps (SOMs) and introduces three main methodological components:
 
@@ -18,28 +18,106 @@ The complete workflow is designed to support reproducible and fully automated tr
 
 ## Repository structure
 
+The repository is organized as follows:
+
 ```text
 SITS-sample-quality/
 ├── api/
 │   └── v.0.0.1/
 │       ├── app.py
-│       └── img/
-│           └── alg.png
+│       ├── analysis/
+│       │   └── classification_performance_metrics/
+│       │       ├── classification_performance_metrics.pdf
+│       │       └── classification_performance_metrics.tex
+│       ├── img/
+│       │   └── alg.png
+│       └── script/
+│           ├── python/
+│           │   ├── script_python_ajusta_base_cerrado.py
+│           │   ├── script_python_ajusta_base_pampa.py
+│           │   ├── script_python_importa_rdata_com_dataframe_em_coluna.py
+│           │   ├── figure/
+│           │   │   ├── 1/
+│           │   │   ├── 2/
+│           │   │   ├── 3/
+│           │   │   ├── 4/
+│           │   │   ├── 5/
+│           │   │   ├── 6/
+│           │   │   ├── 7/
+│           │   │   ├── 8/
+│           │   │   ├── 9/
+│           │   │   ├── 10/
+│           │   │   └── graphical_abstract/
+│           │   └── step/
+│           │       ├── 1/
+│           │       ├── 2/
+│           │       ├── 3/
+│           │       ├── 4/
+│           │       ├── 5/
+│           │       ├── 6/
+│           │       ├── 7/
+│           │       ├── 8/
+│           │       ├── 9/
+│           │       ├── 10/
+│           │       ├── 11/
+│           │       ├── 12/
+│           │       └── all/
+│           └── r/
+│               ├── pampa_points.RData
+│               └── script_r_ajusta_base_pampa.r
 ├── datasets/
+│   └── README.md
 ├── results/
+│   ├── cerrado.50x75/
+│   │   ├── aggregated_results.svg
+│   │   ├── categorized_summary.csv
+│   │   ├── clusters.pdf
+│   │   ├── concatenated_results.txt
+│   │   ├── confusion_matrix.csv
+│   │   └── totals_summary.csv
+│   ├── lorena.60x60/
+│   │   ├── aggregated_results.svg
+│   │   ├── categorized_summary.csv
+│   │   ├── clusters.pdf
+│   │   ├── concatenated_results.txt
+│   │   ├── confusion_matrix.csv
+│   │   └── totals_summary.csv
+│   ├── pampa.25x50/
+│   │   ├── aggregated_results.svg
+│   │   ├── categorized_summary.csv
+│   │   ├── clusters.pdf
+│   │   ├── concatenated_results.txt
+│   │   ├── confusion_matrix.csv
+│   │   └── totals_summary.csv
+│   └── ssf.25x25/
+│       ├── aggregated_results.svg
+│       ├── categorized_summary.csv
+│       ├── clusters.pdf
+│       ├── concatenated_results.txt
+│       ├── confusion_matrix.csv
+│       └── totals_summary.csv
 ├── README.md
 └── requirements.txt
 ```
 
-The main implementation is provided in:
+The main REST-based implementation is provided in:
 
 ```text
 api/v.0.0.1/app.py
 ```
 
-The `datasets/` directory contains or indexes the datasets used by the workflow, subject to their respective access conditions.
+The `api/v.0.0.1/script/` directory contains auxiliary scripts and graphical material used in data preparation, workflow documentation, and production of figures associated with the study.
 
-The `results/` directory contains machine-readable computational outputs associated with the experiments.
+The `datasets/` directory contains documentation describing the datasets and their respective access conditions rather than redistributing datasets that are subject to third-party restrictions.
+
+The `results/` directory contains machine-readable and graphical computational outputs for the four experimental datasets. The directory names correspond to the configurations used in the study:
+
+- `lorena.60x60/` — Cerrado I;
+- `cerrado.50x75/` — Cerrado II;
+- `pampa.25x50/` — Pampa;
+- `ssf.25x25/` — Santana.
+
+Each results directory contains the corresponding aggregated results, categorized summary, clustering output, concatenated results, confusion matrix, and totals summary.
 
 ## Computational workflow
 
@@ -135,7 +213,7 @@ The Santana dataset is publicly available through Zenodo:
 
 https://doi.org/10.5281/zenodo.22674760
 
-The `datasets/` directory provides the repository-level organization associated with the datasets used in the study.
+The `datasets/README.md` file provides repository-level documentation for the datasets and their respective availability conditions.
 
 ## Software environment
 
@@ -185,21 +263,38 @@ with no broken requirements reported.
 
 ## Reproducibility
 
-The repository is intended to provide the source code, dataset references, dependency specification, and machine-readable computational outputs required to reproduce and verify the computational workflow described in the associated study.
+The repository is intended to provide the source code, dataset documentation, dependency specification, auxiliary scripts, and machine-readable computational outputs required to reproduce and verify the computational workflow described in the associated study.
 
 For reproducible execution, users should:
 
 1. use Python 3.12;
 2. create a clean virtual environment;
 3. install the dependencies specified in `requirements.txt`;
-4. use the datasets under their respective access conditions; and
+4. obtain the datasets under their respective access conditions; and
 5. execute the REST-based workflow implemented in `api/v.0.0.1/app.py`.
 
 The source code version associated with the submitted study will be archived as a versioned software release. The corresponding persistent identifier (DOI) will be added here after archival.
 
 ## Results
 
-Machine-readable outputs generated by the computational experiments are organized in the `results/` directory.
+Machine-readable and graphical outputs generated by the computational experiments are organized in four subdirectories under `results/`:
+
+```text
+results/
+├── cerrado.50x75/
+├── lorena.60x60/
+├── pampa.25x50/
+└── ssf.25x25/
+```
+
+For each experimental dataset, the repository provides:
+
+- `aggregated_results.svg` — graphical aggregation of the experimental results;
+- `categorized_summary.csv` — categorized quantitative summary;
+- `clusters.pdf` — clustering output;
+- `concatenated_results.txt` — consolidated textual results;
+- `confusion_matrix.csv` — confusion matrix;
+- `totals_summary.csv` — overall quantitative summary.
 
 These outputs complement the quantitative results reported in the associated manuscript and are provided to facilitate verification and reproducibility.
 
