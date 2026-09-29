@@ -313,9 +313,11 @@ A persistent DOI for the version of the software associated with the submitted s
 
 ## Citation
 
-A `CITATION.cff` file will be provided with the archived software release to supply machine-readable citation metadata.
+Machine-readable citation metadata for the software are provided in the
+`CITATION.cff` file included in this repository.
 
-The software DOI and recommended citation will be added after creation of the versioned release and archival.
+A persistent software DOI and the recommended citation will be added after
+creation of the versioned release and archival.
 
 ## Related work
 
@@ -331,7 +333,8 @@ Licensing information will be provided before the versioned software release.
 
 ## Authors
 
-Authorship and contributor information for the software will be formally specified in the `CITATION.cff` file accompanying the versioned release.
+Software authorship and contributor information are provided in the
+`CITATION.cff` file included in this repository.
 
 ## Associated publication
 
