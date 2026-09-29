@@ -175,21 +175,37 @@ Users must comply with the terms and conditions established by the original data
 
 ## Software environment
 
-The implementation used for the experiments reported in the associated study was developed using:
+The software was developed and validated using Python 3.12.7.
 
-- Python 3.12.7
+The main direct dependencies are:
+
 - Flask 3.1.0
 - pandas 2.2.3
-- NumPy 2.5.1
 - scikit-learn 1.6.1
+- NumPy 1.26.4
 - MiniSom 2.3.1
 - SciPy 1.13.1
-- HDBSCAN 0.8.40
+- FastAPI 0.115.12
 - Matplotlib 3.10.0
+- seaborn 0.13.2
+- HDBSCAN 0.8.40
+- tabulate 0.9.0
+- ReportLab 4.4.1
+- pyshp 2.3.1
+- pyreadr 0.5.3
+- Pillow 11.1.0
+- pdfrw 0.4
 
-For reproducibility, users should use the software versions associated with the archived release corresponding to the published study.
+All direct Python dependencies and their validated versions are specified in
+`requirements.txt`.
 
----
+A reproducible environment can be created with:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 
 ## Reproducibility
 
